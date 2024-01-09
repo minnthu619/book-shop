@@ -20,7 +20,7 @@ public class Author {
     private String authorName;
     private String email;
 
-    @OneToMany(mappedBy = "author", //if author delete ,book delete , cascade
+    @OneToMany(mappedBy = "author", //if author delete ,book delete , cascade, //so author is parent
     cascade = CascadeType.ALL,
     orphanRemoval = true)
     private List<Book> books = new ArrayList<>();
